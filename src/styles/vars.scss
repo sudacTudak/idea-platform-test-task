@@ -1,0 +1,41 @@
+:root {
+  // --CONTAINER--
+  --container-min-width: 768px;
+  --containter-max-width: 1920px;
+  --container-grid-columns-count: 4;
+  --container-grid-gap: 40px;
+
+  // --FONTS--
+  --font-main: 'Inter', sans-serif;
+
+  // --COLORS--
+  // common
+  --color-error: rgba(252, 54, 57, 0.6);
+  --color-primary: #0184cf;
+
+  // text
+  --color-text-bold: rgba(255, 255, 255, 0.87);
+  --color-text-regular: rgba(255, 255, 255, 0.6);
+
+  // cards
+  --color-card-bg: rgba(0, 0, 0, 0.7);
+  --color-card-content-bg: rgba(255, 255, 255, 0.1);
+
+  // ui
+  --color-btn-bg: rgba(255, 255, 255, 0.08);
+  --color-btn-bg-active: rgba(255, 255, 255, 0.2);
+  --color-btn-icon: rgba(255, 255, 255, 0.8);
+  --color-btn-icon-active: var(--color-primary);
+  --color-btn-icon-active-secondary: rgba(255, 255, 255, 0.7);
+
+  --color-search-bg: rgba(255, 255, 255, 0.07);
+  --color-search-border: rgba(255, 255, 255, 0.3);
+  --color-search-outline: rgb(1, 132, 207, 0.5);
+  --color-input-border: rgba(255, 255, 255, 0.5);
+
+  // --SIZES--
+  // ui
+  --brs-btn: 100%;
+  --brs-search: 20px;
+  --brs-input: 4px;
+}
