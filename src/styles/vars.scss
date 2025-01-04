@@ -24,9 +24,9 @@
   // ui
   --color-btn-bg: rgba(255, 255, 255, 0.08);
   --color-btn-bg-active: rgba(255, 255, 255, 0.2);
-  --color-btn-icon: rgba(255, 255, 255, 0.8);
-  --color-btn-icon-active: var(--color-primary);
-  --color-btn-icon-active-secondary: rgba(255, 255, 255, 0.7);
+  --color-btn-icon-text: rgba(255, 255, 255, 0.8);
+  --color-btn-icon-secondary: rgba(255, 255, 255, 0.7);
+  --color-btn-icon-standard: #fff;
 
   --color-search-bg: rgba(255, 255, 255, 0.07);
   --color-search-border: rgba(255, 255, 255, 0.3);
@@ -35,7 +35,7 @@
 
   // --SIZES--
   // ui
-  --brs-btn: 100%;
+  --brs-btn: 50%;
   --brs-search: 20px;
   --brs-input: 4px;
 }
