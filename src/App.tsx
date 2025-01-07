@@ -1,7 +1,7 @@
-import React from 'react';
+import { RootLayout } from './layout/RootLayout/RootLayout';
 
 function App() {
-  return <></>;
+  return <RootLayout></RootLayout>;
 }
 
 export default App;

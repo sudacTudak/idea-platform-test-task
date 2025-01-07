@@ -38,3 +38,10 @@ h2 {
 p {
   margin: 0;
 }
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container-max-width));
+  padding: 0 40px;
+  margin: 0 auto;
+}
