@@ -1,5 +1,12 @@
 import { GroupedTask, TaskEntity } from '../types/task.types';
 
+export const checkIsRightDateFormat = (dateStr: string) =>
+  /^\d{2}\.\d{2}\.\d{4}$/.test(dateStr);
+
+export const transformDateStrFormat = (dateStr: string) => {
+  return dateStr.split('.').reverse().join('-');
+};
+
 export const sortTasksByStartDay = (tasks: TaskEntity[]) =>
   tasks.slice().sort((a, b) => a.startDay - b.startDay);
 
@@ -7,7 +14,7 @@ export const filterTasksBySearchQuery = (
   tasks: TaskEntity[],
   query: string
 ) => {
-  const isDate = /^\d{2}\.\d{2}\.\d{4}$/.test(query);
+  const isDate = checkIsRightDateFormat(query);
 
   if (!isDate) {
     return tasks.filter((task) =>
@@ -15,7 +22,7 @@ export const filterTasksBySearchQuery = (
     );
   }
 
-  const queryDate = new Date(query.split('.').reverse().join('-')).getTime();
+  const queryDate = new Date(transformDateStrFormat(query)).getTime();
   return tasks.filter(
     (task) => task.startDay === queryDate || task.endDay === queryDate
   );

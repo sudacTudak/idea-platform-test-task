@@ -1,6 +1,3 @@
-import { InputHTMLAttributes } from 'react';
+import { InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
 
-export interface TextFieldProps
-  extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
-  onChange: (value: string) => void;
-}
+export interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {}

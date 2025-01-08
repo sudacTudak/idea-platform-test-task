@@ -5,7 +5,7 @@
   border-radius: var(--brs-input);
   background-color: transparent;
   font-family: var(--font-main);
-  font-size: 22px;
+  font-size: 14px;
   line-height: 1;
   font-weight: 700;
   color: var(--color-text-bold);
@@ -20,5 +20,9 @@
   &:focus {
     outline: none;
     caret-color: var(--color-primary);
+  }
+
+  &:disabled {
+    border: none;
   }
 }

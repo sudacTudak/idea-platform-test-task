@@ -8,6 +8,9 @@ export interface TaskEntity {
   text: string;
 }
 
+export type UpdateTaskData = Partial<Omit<TaskEntity, 'id'>>;
+export type CreateTaskData = Omit<TaskEntity, 'type' | 'id'>;
+
 export interface GroupedTask<T extends TaskType> extends TaskEntity {
   type: T;
 }
