@@ -1,7 +1,7 @@
 import styles from './TaskForm.module.scss';
 import cn from 'classnames';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { taskFormSchema } from './TaskForm.schema';
@@ -22,14 +22,14 @@ const INITIAL_DEFAULT_VALUES: TaskFormData = {
 
 export const TaskForm: React.FC<TaskFormProps> = ({
   formValues,
-  isEditable = false,
-  editMode = false,
   isTaskOverdue,
+  isEditable = false,
+  isEditMode = false,
+  setIsEditMode,
   onSubmit,
   onCancelEdit,
   className
 }) => {
-  const [isEditMode, setIsEditMode] = useState<boolean>(editMode);
   const {
     register,
     handleSubmit,
@@ -49,16 +49,16 @@ export const TaskForm: React.FC<TaskFormProps> = ({
     }
   }, [isEditMode]);
 
-  const handleEditBtnClick = () => setIsEditMode(true);
+  const handleEditBtnClick = () => setIsEditMode && setIsEditMode(true);
   const handleCancelBtnClick = () => {
     onCancelEdit && onCancelEdit();
-    setIsEditMode(false);
+    setIsEditMode && setIsEditMode(false);
     reset();
   };
 
   const onFormSubmit = (data: TaskFormData) => {
     onSubmit && onSubmit(data);
-    setIsEditMode(false);
+    setIsEditMode && setIsEditMode(false);
     reset(data);
   };
 

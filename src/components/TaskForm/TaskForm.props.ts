@@ -4,7 +4,8 @@ export interface TaskFormProps {
   formValues?: TaskFormData;
   isTaskOverdue?: boolean;
   isEditable?: boolean;
-  editMode?: boolean;
+  isEditMode?: boolean;
+  setIsEditMode?: (value: boolean) => void;
   onSubmit?: (data: TaskFormData) => void;
   onCancelEdit?: () => void;
   className?: string;

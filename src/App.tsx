@@ -33,11 +33,6 @@ function App() {
     setTaskGroups(groupTasksByType(searchedTasks));
   }, [tasksState.tasks, deferredSearchValue]);
 
-  useEffect(() => {
-    console.log('useEffect in App tasksState: ', tasksState);
-    console.log('useEffect in App taskGroups: ', taskGroups);
-  }, [tasksState.tasks, taskGroups]);
-
   const addTask = (taskData: CreateTaskData) =>
     dispatch({
       type: TasksActionsTypes.ADD_TASK,

@@ -28,6 +28,7 @@ export const TasksPanel: React.FC<TasksPanelProps> = ({
         tasks={taskGroups.todo}
         handleAddTask={addTask}
         handleEditTask={editTask}
+        handleDropTask={handleDropTask}
         className={styles['column']}
       />
       <TaskColumn

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { CreateTaskData } from '../../types/task.types';
 import { transformDateStrFormat } from '../../utils';
 import { Card } from '../Card/Card';
@@ -10,6 +11,8 @@ export const AddTaskCard: React.FC<AddTaskCardProps> = ({
   onCancelCreating,
   className
 }) => {
+  const [isEditMode, setIsEditMode] = useState(true);
+
   const handleFormSubmit = (data: TaskFormData) => {
     const createdData: CreateTaskData = {
       startDay: new Date(transformDateStrFormat(data.startDay)).getTime(),
@@ -26,7 +29,8 @@ export const AddTaskCard: React.FC<AddTaskCardProps> = ({
         onSubmit={handleFormSubmit}
         onCancelEdit={onCancelCreating}
         isEditable
-        editMode
+        isEditMode={isEditMode}
+        setIsEditMode={setIsEditMode}
       />
     </Card>
   );
