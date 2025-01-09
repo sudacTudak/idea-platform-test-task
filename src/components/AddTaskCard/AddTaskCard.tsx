@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { CreateTaskData } from '../../types/task.types';
-import { transformDateStrFormat } from '../../utils';
+import { transformDateStrFormat } from '../../utils/date.utils';
 import { Card } from '../Card/Card';
 import { TaskForm } from '../TaskForm/TaskForm';
 import { TaskFormData } from '../TaskForm/TaskForm.types';

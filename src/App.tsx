@@ -8,7 +8,7 @@ import {
   filterTasksBySearchQuery,
   groupTasksByType,
   sortTasksByStartDay
-} from './utils';
+} from './utils/tasks.utils';
 
 import { CreateTaskData, TaskGroups, UpdateTaskData } from './types/task.types';
 import { TasksActionsTypes } from './reducers/tasks/tasks.types';

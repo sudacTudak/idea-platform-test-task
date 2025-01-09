@@ -7,7 +7,7 @@ import { Card } from '../Card/Card';
 import { TaskFormData } from '../TaskForm/TaskForm.types';
 import { TaskForm } from '../TaskForm/TaskForm';
 import { UpdateTaskData } from '../../types/task.types';
-import { transformDateStrFormat } from '../../utils';
+import { transformDateStrFormat } from '../../utils/date.utils';
 import { useDrag } from 'react-dnd';
 import { DRAGGABLE_ITEMS_TYPES } from '../../utils/dnd.utils';
 import { useState } from 'react';

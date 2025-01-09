@@ -1,11 +1,5 @@
 import { GroupedTask, TaskEntity } from '../types/task.types';
-
-export const checkIsRightDateFormat = (dateStr: string) =>
-  /^\d{2}\.\d{2}\.\d{4}$/.test(dateStr);
-
-export const transformDateStrFormat = (dateStr: string) => {
-  return dateStr.split('.').reverse().join('-');
-};
+import { checkIsRightDateFormat, transformDateStrFormat } from './date.utils';
 
 export const sortTasksByStartDay = (tasks: TaskEntity[]) =>
   tasks.slice().sort((a, b) => a.startDay - b.startDay);
@@ -22,10 +16,31 @@ export const filterTasksBySearchQuery = (
     );
   }
 
-  const queryDate = new Date(transformDateStrFormat(query)).getTime();
-  return tasks.filter(
-    (task) => task.startDay === queryDate || task.endDay === queryDate
-  );
+  const queryDate = new Date(transformDateStrFormat(query));
+  const queryDateJoin = [
+    queryDate.getDate(),
+    queryDate.getMonth(),
+    queryDate.getFullYear()
+  ].join();
+
+  return tasks.filter((task) => {
+    const taskStartDate = new Date(task.startDay);
+    const taskEndDate = new Date(task.endDay);
+
+    const startDateJoin = [
+      taskStartDate.getDate(),
+      taskStartDate.getMonth(),
+      taskStartDate.getFullYear()
+    ].join();
+
+    const endDateJoin = [
+      taskEndDate.getDate(),
+      taskEndDate.getMonth(),
+      taskEndDate.getFullYear()
+    ].join();
+
+    return queryDateJoin === startDateJoin || queryDateJoin === endDateJoin;
+  });
 };
 
 export const groupTasksByType = (tasks: TaskEntity[]) => ({
