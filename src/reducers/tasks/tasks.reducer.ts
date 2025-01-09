@@ -49,8 +49,9 @@ export const TasksReducer: Reducer<TasksState, TasksActions> = (
       const newTaskId =
         existingTaskIds.length === 0 ? 1 : Math.max(...existingTaskIds) + 1;
 
-      const newTask = {
+      const newTask: TaskEntity = {
         id: newTaskId,
+        type: 'todo',
         ...newTaskData
       };
 

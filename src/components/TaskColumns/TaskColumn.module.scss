@@ -1,0 +1,9 @@
+.task-item {
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.add-task-card {
+  margin-bottom: 16px;
+}

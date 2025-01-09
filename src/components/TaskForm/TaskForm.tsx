@@ -57,10 +57,9 @@ export const TaskForm: React.FC<TaskFormProps> = ({
   };
 
   const onFormSubmit = (data: TaskFormData) => {
-    console.log('onFormSubmit data: ', data);
     onSubmit && onSubmit(data);
     setIsEditMode(false);
-    reset();
+    reset(data);
   };
 
   return (

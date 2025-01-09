@@ -1,0 +1,7 @@
+.panel {
+  display: grid;
+  grid-template-columns: repeat(var(--container-grid-col-count), 1fr);
+  grid-template-rows: 1fr;
+  align-items: flex-start;
+  gap: 40px;
+}

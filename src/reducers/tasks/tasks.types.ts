@@ -1,4 +1,8 @@
-import { TaskEntity } from '../../types/task.types';
+import {
+  CreateTaskData,
+  TaskEntity,
+  UpdateTaskData
+} from '../../types/task.types';
 
 type TasksStatus = 'idle' | 'received' | 'loading';
 
@@ -26,7 +30,7 @@ export type SetTasksActionType = {
 export type AddTaskActionType = {
   type: TasksActionsTypes.ADD_TASK;
   payload: {
-    taskData: Omit<TaskEntity, 'id'>;
+    taskData: CreateTaskData;
   };
 };
 
@@ -34,7 +38,7 @@ export type UpdateTaskActionType = {
   type: TasksActionsTypes.EDIT_TASK;
   payload: {
     taskId: number;
-    taskData: Partial<Omit<TaskEntity, 'id'>>;
+    taskData: UpdateTaskData;
   };
 };
 
