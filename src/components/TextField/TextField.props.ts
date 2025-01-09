@@ -1,3 +1,3 @@
-import { InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
+import { InputHTMLAttributes } from 'react';
 
 export interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {}

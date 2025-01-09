@@ -13,6 +13,7 @@ import { ReactComponent as EditIcon } from './../../assets/icons/edit.svg';
 import { ReactComponent as CheckIcon } from './../../assets/icons/check.svg';
 import { ReactComponent as CrossIcon } from './../../assets/icons/cross.svg';
 import { IconButton } from '../IconButton/IconButton';
+import { TextareaField } from '../TextareaField/TextareaField';
 
 const INITIAL_DEFAULT_VALUES: TaskFormData = {
   endDay: '',
@@ -98,7 +99,7 @@ export const TaskForm: React.FC<TaskFormProps> = ({
         <label className={styles['field']}>
           <div className={styles['field-body']}>
             <span className={styles['label']}>Описание:</span>
-            <TextField
+            <TextareaField
               disabled={!isEditMode}
               className={styles['value']}
               {...register('text', { disabled: !isEditMode })}
