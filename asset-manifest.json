@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/idea-platform-test-task/static/css/main.f2294496.css",
+    "main.js": "/idea-platform-test-task/static/js/main.09445d0b.js",
+    "static/media/bg-image.jpg": "/idea-platform-test-task/static/media/bg-image.15eb03a1bf38cb488048.jpg",
+    "static/media/cross.svg": "/idea-platform-test-task/static/media/cross.b8fe1ae092175b6aa9675014f5279843.svg",
+    "static/media/trash.svg": "/idea-platform-test-task/static/media/trash.0763375cfa1b423fb3274b1a5d7dc889.svg",
+    "static/media/smile.svg": "/idea-platform-test-task/static/media/smile.9e28e714915020aa35249e2e7d03e85d.svg",
+    "static/media/smile-upside-down.svg": "/idea-platform-test-task/static/media/smile-upside-down.ad42debf1588c74c4e8877910dfc97a6.svg",
+    "static/media/search.svg": "/idea-platform-test-task/static/media/search.519013d8354d089c3d8cab3968b746be.svg",
+    "static/media/happy-alt.svg": "/idea-platform-test-task/static/media/happy-alt.1184d632080bd1b90cb071ad282db592.svg",
+    "index.html": "/idea-platform-test-task/index.html",
+    "static/media/ghost.svg": "/idea-platform-test-task/static/media/ghost.f400119be8733a07752a66427e301f99.svg",
+    "static/media/edit.svg": "/idea-platform-test-task/static/media/edit.9ccfdebcbd7879fadde3fd6a12bca36b.svg",
+    "static/media/check.svg": "/idea-platform-test-task/static/media/check.60a25528396de939a341fe99e43e9a4f.svg",
+    "main.f2294496.css.map": "/idea-platform-test-task/static/css/main.f2294496.css.map",
+    "main.09445d0b.js.map": "/idea-platform-test-task/static/js/main.09445d0b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2294496.css",
+    "static/js/main.09445d0b.js"
+  ]
+}
