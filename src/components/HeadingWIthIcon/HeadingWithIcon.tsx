@@ -1,7 +1,7 @@
 import styles from './HeadingWithIcon.module.scss';
 import cn from 'classnames';
-import { HeadingWithIconProps } from './HeadingWithIcon.props';
 import { Heading } from '../Heading/Heading';
+import { HeadingWithIconProps } from './HeadingWithIcon.props';
 
 export const HeadingWithIcon = ({
   className,
