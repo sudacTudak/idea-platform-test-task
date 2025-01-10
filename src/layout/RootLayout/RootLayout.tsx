@@ -8,7 +8,7 @@ export const RootLayout: React.FC<RootLayoutProps> = ({
 }) => {
   return (
     <div className={styles['layout']} {...props}>
-      <Header />
+      <Header className={styles['header']} />
       <main className={styles['content']}>
         <div className="container">{children}</div>
       </main>

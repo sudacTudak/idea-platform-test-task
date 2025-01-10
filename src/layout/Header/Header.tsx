@@ -12,11 +12,9 @@ export const Header: React.FC<HeaderProps> = ({ className }) => {
     <header className={cn(styles['header'], className)}>
       <div className={cn('container', styles['header-container'])}>
         <Heading level="h1">Your tasks</Heading>
-        <SearchField
-          value={searchValue}
-          onChange={handleChangeSearchValue}
-          className={styles['search']}
-        />
+        <div className={styles['search']}>
+          <SearchField value={searchValue} onChange={handleChangeSearchValue} />
+        </div>
       </div>
     </header>
   );

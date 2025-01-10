@@ -15,4 +15,9 @@
     height: 100%;
     fill: currentColor;
   }
+
+  @media (min-width: 768px) and (max-width: 1600px) {
+    width: 22px;
+    height: 22px;
+  }
 }

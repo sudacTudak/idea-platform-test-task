@@ -66,36 +66,38 @@ export const TaskForm: React.FC<TaskFormProps> = ({
   return (
     <>
       <form className={cn(styles['info-form'], className)}>
-        <label className={styles['field']}>
-          <div className={styles['field-body']}>
-            <span className={styles['label']}>Начало:</span>
-            <TextField
-              disabled={!isEditMode}
-              className={styles['value']}
-              {...register('startDay', { disabled: !isEditMode })}
-            />
-          </div>
-          {errors.startDay && (
-            <p className={styles['error']}>{errors.startDay.message}</p>
-          )}
-        </label>
-        <label
-          className={cn(styles['field'], {
-            [styles['overdue']]: isTaskOverdue && !isEditMode
-          })}
-        >
-          <div className={styles['field-body']}>
-            <span className={styles['label']}>Окончание:</span>
-            <TextField
-              disabled={!isEditMode}
-              className={styles['value']}
-              {...register('endDay', { disabled: !isEditMode })}
-            />
-          </div>
-          {errors.endDay && (
-            <p className={styles['error']}>{errors.endDay.message}</p>
-          )}
-        </label>
+        <div className={styles['date-fields']}>
+          <label className={styles['field']}>
+            <div className={styles['field-body']}>
+              <span className={styles['label']}>Начало:</span>
+              <TextField
+                disabled={!isEditMode}
+                className={styles['value']}
+                {...register('startDay', { disabled: !isEditMode })}
+              />
+            </div>
+            {errors.startDay && (
+              <p className={styles['error']}>{errors.startDay.message}</p>
+            )}
+          </label>
+          <label
+            className={cn(styles['field'], {
+              [styles['overdue']]: isTaskOverdue && !isEditMode
+            })}
+          >
+            <div className={styles['field-body']}>
+              <span className={styles['label']}>Окончание:</span>
+              <TextField
+                disabled={!isEditMode}
+                className={styles['value']}
+                {...register('endDay', { disabled: !isEditMode })}
+              />
+            </div>
+            {errors.endDay && (
+              <p className={styles['error']}>{errors.endDay.message}</p>
+            )}
+          </label>
+        </div>
         <label className={styles['field']}>
           <div className={styles['field-body']}>
             <span className={styles['label']}>Описание:</span>

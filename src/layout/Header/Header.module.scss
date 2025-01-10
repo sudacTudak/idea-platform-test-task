@@ -2,14 +2,30 @@
   padding: 58px 0 52px;
   display: flex;
   align-items: center;
+
+  @media (min-width: 1280px) and (max-width: 1600px) {
+    padding: 36px 0;
+  }
+  @media (min-width: 768px) and (max-width: 1280px) {
+    padding: 30px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 0 20px;
+  }
 }
 
 .header-container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .search {
   max-width: 430px;
   width: 100%;
+
+  @media (min-width: 768px) and (max-width: 1280px) {
+    max-width: 300px;
+  }
 }

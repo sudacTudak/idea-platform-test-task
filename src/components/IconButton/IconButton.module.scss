@@ -23,6 +23,16 @@
   &:focus {
     background-color: var(--color-btn-bg-active);
   }
+
+  @media (min-width: 768px) and (max-width: 1440px) {
+    width: 30px;
+    height: 30px;
+
+    .icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 
 .btn-text {

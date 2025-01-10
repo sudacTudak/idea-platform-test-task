@@ -13,6 +13,7 @@ body,
 
 body {
   margin: 0;
+  overflow: hidden;
   font-family: var(--font-main);
   background-image: url('./../assets/bg-images/bg-image.jpg');
   background-repeat: no-repeat;
@@ -41,7 +42,15 @@ p {
 
 .container {
   width: 100%;
-  max-width: calc(var(--container-max-width));
+  max-width: var(--container-max-w);
   padding: 0 40px;
   margin: 0 auto;
+
+  @media (min-width: 1280px) and (max-width: 1600px) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1280px) {
+    padding: 0 20px;
+  }
 }
