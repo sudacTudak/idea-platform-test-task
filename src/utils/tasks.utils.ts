@@ -8,15 +8,16 @@ export const filterTasksBySearchQuery = (
   tasks: TaskEntity[],
   query: string
 ) => {
-  const isDate = checkIsRightDateFormat(query);
+  const trimmedQuery = query.trim();
+  const isDate = checkIsRightDateFormat(trimmedQuery);
 
   if (!isDate) {
     return tasks.filter((task) =>
-      task.text.toLowerCase().includes(query.toLowerCase())
+      task.text.toLowerCase().includes(trimmedQuery.toLowerCase())
     );
   }
 
-  const queryDate = new Date(transformDateStrFormat(query));
+  const queryDate = new Date(transformDateStrFormat(trimmedQuery));
   const queryDateJoin = [
     queryDate.getDate(),
     queryDate.getMonth(),
